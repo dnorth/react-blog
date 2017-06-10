@@ -141,7 +141,7 @@ module.exports = {
           /\.bmp$/,
           /\.gif$/,
           /\.jpe?g$/,
-          /\.png$/,
+          /\.png$/
         ],
         loader: require.resolve('file-loader'),
         options: {

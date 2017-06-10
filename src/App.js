@@ -1,6 +1,10 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import ReactMarkdown from 'react-markdown'
+
+import logo from './logo.svg'
+import './App.css'
+
+const input = "# this is a test"
 
 class App extends Component {
   render() {
@@ -10,12 +14,10 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <ReactMarkdown source={input} />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
