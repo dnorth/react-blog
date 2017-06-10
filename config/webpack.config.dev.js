@@ -141,7 +141,8 @@ module.exports = {
           /\.bmp$/,
           /\.gif$/,
           /\.jpe?g$/,
-          /\.png$/
+          /\.png$/,
+          /\.md$/
         ],
         loader: require.resolve('file-loader'),
         options: {
@@ -206,6 +207,10 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+            test: /\.md$/,
+            loader: require.resolve('raw-loader')
       },
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "file" loader exclusion list.
