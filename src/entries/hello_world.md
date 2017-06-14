@@ -1,35 +1,15 @@
-# Live demo
+# Hello World!
 
-Changes are automatically rendered as you type.
+Oh boy this is gonna be so cool!
 
-* Follows the [CommonMark](http://commonmark.org/) spec
-* Renders actual, "native" React DOM elements
-* Allows you to escape or skip HTML (try toggling the checkboxes above)
-* If you escape or skip the HTML, no `dangerouslySetInnerHTML` is used! Yay!
+## Markdown Awesomeness!
 
-## HTML block below
+Check out that code block!
 
-<blockquote>
-    This blockquote will change based on the HTML settings above.
-</blockquote>
-
-## How about some code?
 ```js
-var React = require('react');
-var Markdown = require('react-markdown');
+const React = require('react');
 
-React.render(
-    <Markdown source="# Your markdown here" />,
-    document.getElementById('content')
-);
+var check = 'me out'
+
+<CoolComponent someProp={check} />
 ```
-
-Pretty neat, eh?
-
-## More info?
-
-Read usage information and more on [GitHub](//github.com/rexxars/react-markdown)
-
----------------
-
-A component by [VaffelNinja](http://vaffel.ninja) / Espen Hovlandsdal
