@@ -10,7 +10,9 @@ function ChromeLayout(props)
 {
   return (
     <div>
-      <NavigationBar />
+      <NavigationBar>
+        Sticky Sticky
+      </NavigationBar>
         {props.children}
     </div>
   )

@@ -1,4 +1,5 @@
 import autobind from 'autobind-decorator'
+import throttle from 'lodash.throttle'
 import React from 'react'
 import { Sticky } from 'react-sticky'
 
@@ -13,13 +14,13 @@ export default class NavigationBar extends React.Component {
 
   calculateDisplayNav() {
     this.setState({
-      shouldDisplayNav: this.state.prevScroll > window.scrollY,
+      shouldDisplayNav: this.state.prevScroll >= window.scrollY && window.scrollY != 0,
       prevScroll: window.scrollY
     })
   }
 
   componentDidMount(){
-      window.addEventListener('scroll', this.calculateDisplayNav);
+      window.addEventListener('scroll', throttle(this.calculateDisplayNav, 200));
   }
 
   componentWillUnmount(){
@@ -27,18 +28,24 @@ export default class NavigationBar extends React.Component {
   }
 
   render() {
+    console.log('shouldDisplayNav: ', this.state.shouldDisplayNav)
+    
     return (
-      <Sticky>
-        {
-          props => {
-            return (
-              <div className={css.content} style={props.style}>
-                Sticky sticky
-              </div>
-            )
+      this.state.shouldDisplayNav
+      ? (
+        <Sticky>
+          {
+            props => {
+              return (
+                <div className={css.content} style={props.style}>
+                  {this.props.children}
+                </div>
+              )
+            }
           }
-        }
-      </Sticky>
+        </Sticky>
+      )
+      : <div>Sticky Sticky</div>
     )
   } 
 }
