@@ -8,15 +8,15 @@ import css from './index.css'
 @autobind
 export default class NavigationBar extends React.Component {
   state = {
-    prevScroll: 0,
     shouldDisplayNav: false
   }
 
   calculateDisplayNav() {
     this.setState({
-      shouldDisplayNav: this.state.prevScroll >= window.scrollY && window.scrollY != 0,
-      prevScroll: window.scrollY
+      shouldDisplayNav: this.prevScroll >= window.scrollY && window.scrollY != 0
     })
+
+    this.prevScroll = window.scrollY
   }
 
   componentDidMount(){
@@ -27,9 +27,7 @@ export default class NavigationBar extends React.Component {
       window.removeEventListener('scroll', this.calculateDisplayNav);
   }
 
-  render() {
-    console.log('shouldDisplayNav: ', this.state.shouldDisplayNav)
-    
+  render() {    
     return (
       this.state.shouldDisplayNav
       ? (
@@ -37,7 +35,7 @@ export default class NavigationBar extends React.Component {
           {
             props => {
               return (
-                <div className={css.content} style={props.style}>
+                <div className={css.stickyContent} style={props.style}>
                   {this.props.children}
                 </div>
               )
@@ -45,7 +43,7 @@ export default class NavigationBar extends React.Component {
           }
         </Sticky>
       )
-      : <div>Sticky Sticky</div>
+      : <div className={css.content}>Sticky Sticky</div>
     )
   } 
 }
