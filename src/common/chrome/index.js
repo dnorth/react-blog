@@ -1,10 +1,7 @@
 import React from 'react'
-import { StickyContainer, Sticky } from 'react-sticky'
+import { StickyContainer } from 'react-sticky'
 
-import logo from './logo.svg'
 import NavigationBar from '../nav-bar'
-
-import css from './index.css'
 
 function ChromeLayout(props)
 {
