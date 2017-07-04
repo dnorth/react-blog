@@ -9,12 +9,14 @@ import css from './index.css'
 @autobind
 export default class NavigationBar extends React.Component {
   state = {
-    shouldDisplayNav: false
+    shouldDisplayNav: false,
+    isAtTheTop: true
   }
 
   calculateDisplayNav() {
     this.setState({
-      shouldDisplayNav: this.prevScroll >= window.scrollY && window.scrollY !== 0
+      shouldDisplayNav: this.prevScroll >= window.scrollY,
+      isAtTheTop:  window.scrollY === 0
     })
 
     this.prevScroll = window.scrollY
@@ -29,12 +31,11 @@ export default class NavigationBar extends React.Component {
   }
 
   render() {
-    const classname = classnames(css.stickyContent, this.state.shouldDisplayNav ? css.displaySticky : css.hideSticky)
+    const classname = classnames(this.state.isAtTheTop ? css.content : css.stickyContent, 
+                      this.state.shouldDisplayNav || this.state.isAtTheTop ? css.displaySticky : css.hideSticky)
 
     return (
       <div>
-        <div className={css.content}>Sticky Sticky</div>
-
         <Sticky>
           {
             props => {

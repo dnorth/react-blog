@@ -6,7 +6,7 @@
 .stickyContent {
   composes: content;
   border-bottom: 1px solid #666;
-  transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .displaySticky {
@@ -16,4 +16,8 @@
 .hideSticky {
   transform: translateY(-100%);
   visibility: hidden;
+}
+
+.isTransitioning {
+  transition: all 0.3s ease-in-out;
 }
