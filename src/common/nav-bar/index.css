@@ -1,12 +1,20 @@
 .content {
+  position: absolute;
   height: 60px;
   background: white;
+  top: 0;
+  width: 100%;
 }
 
-.stickyContent {
-  composes: content;
+.parent {
+  position: relative;
+  padding-top: 60px;
+}
+
+.fixed {
+  position: fixed;
+  transform: translateY(-100%);
   border-bottom: 1px solid #666;
-    transition: all 0.3s ease-in-out;
 }
 
 .displaySticky {
@@ -14,10 +22,12 @@
 }
 
 .hideSticky {
-  transform: translateY(-100%);
   visibility: hidden;
 }
 
 .isTransitioning {
   transition: all 0.3s ease-in-out;
+}
+body {
+    margin: 0;
 }

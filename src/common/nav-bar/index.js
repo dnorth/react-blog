@@ -16,7 +16,8 @@ export default class NavigationBar extends React.Component {
   calculateDisplayNav() {
     this.setState({
       shouldDisplayNav: this.prevScroll >= window.scrollY,
-      isAtTheTop:  window.scrollY === 0
+      isAtTheTop:  window.scrollY === 0,
+      scrollWHY: window.scrollY >= 60
     })
 
     this.prevScroll = window.scrollY
@@ -31,23 +32,15 @@ export default class NavigationBar extends React.Component {
   }
 
   render() {
-    const classname = classnames(this.state.isAtTheTop ? css.content : css.stickyContent, 
-                      this.state.shouldDisplayNav || this.state.isAtTheTop ? css.displaySticky : css.hideSticky)
+    const classname = classnames(css.content, (this.state.scrollWHY || (this.state.shouldDisplayNav && !this.state.isAtTheTop)) && css.fixed,
+                      !this.state.isAtTheTop && this.state.shouldDisplayNav && classnames(css.displaySticky, css.isTransitioning))
 
-    return (
-      <div>
-        <Sticky>
-          {
-            props => {
-              return (
-                <div className={classname} style={ {...props.style, transform: ''}}>
-                  {this.props.children}
-                </div>
-              )
-            }
-          }
-        </Sticky>
-      </div>
+    return (    
+      <div className={css.parent}>
+        <div className={classname}>
+          Sticky Sticky
+        </div>
+      </div> 
     )
   } 
 }
