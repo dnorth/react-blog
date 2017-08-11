@@ -1,0 +1,19 @@
+.content {
+  height: 60px;
+  background: white;
+}
+
+.stickyContent {
+  composes: content;
+  border-bottom: 1px solid #666;
+  transition: all 0.3s ease-in-out;
+}
+
+.displaySticky {
+  transform: translateY(0);
+}
+
+.hideSticky {
+  transform: translateY(-100%);
+  visibility: hidden;
+}

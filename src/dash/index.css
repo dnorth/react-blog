@@ -1,9 +1,5 @@
-.body {
+.content {
   display: flex;
   justify-content: center;
   font-family: sans-serif;
-}
-
-.intro {
-  font-size: large;
 }

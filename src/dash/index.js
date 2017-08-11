@@ -11,7 +11,7 @@ export default class App extends Component {
   render() {
     return (
       <ChromeLayout>
-        <div className={css.body}>
+        <div className={css.content}>
           <ReactMarkdown source={helloWorld}
                         renderers={ { CodeBlock } } />
         </div>
