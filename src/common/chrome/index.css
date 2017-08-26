@@ -1,17 +1,18 @@
-.logo {
-  animation: spinner infinite 20s linear;
-  height: 80px;
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 800px;  
+  margin: auto;
 }
 
-.header {
-  text-align: center;
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.navItems {
+  display: flex;
+  justify-content: left;
 }
 
-@keyframes spinner {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.socialItems {
+  display: flex;
+  justify-content: right;
 }

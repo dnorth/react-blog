@@ -1,18 +1,11 @@
 .content {
-  position: absolute;
-  height: 60px;
   background: white;
   top: 0;
   width: 100%;
+  height: 60px;
 }
 
-.parent {
-  position: relative;
-  padding-top: 60px;
-}
-
-.fixed {
-  position: fixed;
-  transform: translateY(-100%);
-  border-bottom: 1px solid #666;
+.stickyContent {
+  composes: content;
+  border-bottom: 1px solid #666;    
 }
