@@ -1,5 +1,5 @@
-.content {
-  display: flex;
-  justify-content: center;
-  font-family: sans-serif;
+@import '../common/variables.css';
+
+body {
+  background: var(--backgroundColor);
 }

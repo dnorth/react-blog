@@ -1,4 +1,6 @@
-.content {
+@import '../variables.css';
+
+.navContent {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,4 +17,17 @@
 .socialItems {
   display: flex;
   justify-content: right;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  width: 1000px;
+  background: #fff;
+  margin: auto;
+}
+
+.background {
+  background: var(--backgroundColor);  
 }

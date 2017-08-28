@@ -9,23 +9,23 @@ import css from './index.css'
 function ChromeLayout(props)
 {
   return (
-    <div>
+    <div className={css.background}>
       <NavigationBar>
-        <div className={css.powerContent}>
-          <div className={css.content}>
-            <div className={css.navItems}>
-              <NavItem>Blog</NavItem>
-              <NavItem>About</NavItem>
-            </div>
-            <div className={css.socialItems}>
-              <NavItem>Github</NavItem>
-              <NavItem>Twitter</NavItem>
-              <NavItem>LinkedIn</NavItem>
-            </div>
+        <div className={css.navContent}>
+          <div className={css.navItems}>
+            <NavItem>Blog</NavItem>
+            <NavItem>About</NavItem>
+          </div>
+          <div className={css.socialItems}>
+            <NavItem>Github</NavItem>
+            <NavItem>Twitter</NavItem>
+            <NavItem>LinkedIn</NavItem>
           </div>
         </div>
       </NavigationBar>
+      <div className={css.content}>
         {props.children}
+      </div>
     </div>
   )
 }
