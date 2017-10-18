@@ -1,7 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Dash from './dash';
-import registerServiceWorker from './registerServiceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 
-ReactDOM.render(<Dash />, document.getElementById('root'));
-registerServiceWorker();
+import Dash from './dash'
+import registerServiceWorker from './registerServiceWorker'
+
+ReactDOM.render((
+  <BrowserRouter>
+    <Dash />
+  </BrowserRouter>
+), document.getElementById('root'))
+
+registerServiceWorker()

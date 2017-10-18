@@ -13,8 +13,9 @@ function ChromeLayout(props)
       <NavigationBar>
         <div className={css.navContent}>
           <div className={css.navItems}>
-            <NavItem>Blog</NavItem>
-            <NavItem>About</NavItem>
+            <NavItem to='/'>Home</NavItem>
+            <NavItem to='/blog'>Blog</NavItem>
+            <NavItem to='/about'>About</NavItem>
           </div>
           <div className={css.socialItems}>
             <NavItem>Github</NavItem>

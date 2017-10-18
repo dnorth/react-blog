@@ -1,18 +1,13 @@
 import React, { Component } from 'react'
-import ReactMarkdown from 'react-markdown'
 
 import ChromeLayout from '../common/chrome'
-import CodeBlock from '../renderers/code-block'
-
-import css from './index.css'
-import helloWorld from '../entries/hello_world.md'
+import MainRouter from '../router'
 
 export default class App extends Component {
   render() {
     return (
       <ChromeLayout>
-        <ReactMarkdown source={helloWorld}
-                      renderers={ { CodeBlock } } />
+        <MainRouter />
       </ChromeLayout>
     )
   }
