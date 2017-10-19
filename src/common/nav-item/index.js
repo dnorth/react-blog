@@ -5,9 +5,7 @@ import { string } from 'prop-types'
 import css from './index.css'
 
 const NavItem = (props) => (
-  <div className={css.item}>
-    <Link to={props.to}>{props.children}</Link>
-  </div>
+  <Link to={props.to} className={css.navItem}>{props.children}</Link>
 )
 
 NavItem.propTypes = {
