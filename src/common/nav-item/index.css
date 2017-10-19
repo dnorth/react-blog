@@ -5,17 +5,34 @@
   display: inline-block;
 }
 
+.navItem:before {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  background: red;
+  width: 0;
+  height: 3px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out; 
+  left: calc(50%);
+}
+.navItem:hover:before {
+  width: 50%;
+  opacity: 1;
+}
+
 .navItem:after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 2px;
   background: red;
   width: 0;
-  height: 5px;
-  transition: all 0.5s ease-in-out;      
+  height: 3px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out; 
+  right: calc(50%);  
 }
-
 .navItem:hover:after {
-  width: 100%;
+  width: 50%;
+  opacity: 1;
 }
