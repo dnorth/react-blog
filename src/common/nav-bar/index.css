@@ -1,11 +1,10 @@
 @import "../variables.css";
 
 .content {
-  color: #569CD6;
   top: 0;
   width: 100%;
   height: 60px;
-  background: var(--navColor);  
+  background: var(--navColor);
 }
 
 .stickyContent {

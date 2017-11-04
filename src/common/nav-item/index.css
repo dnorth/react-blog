@@ -1,5 +1,7 @@
 .navItem {
   padding: 10px;
+  font-size: 16px;
+  font-weight: 100;
   text-decoration: none;
   position: relative;
   display: inline-block;
