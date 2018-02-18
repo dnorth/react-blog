@@ -1,7 +1,9 @@
 import React from 'react'
 
+import Header from './header'
+
 const KoalaTee = () => (
-    <div> KOALAS </div>
+    <Header />
 )
 
 export default KoalaTee

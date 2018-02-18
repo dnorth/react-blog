@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    background-color: #F78E05;
+    font-family: lulo-clean-one-bold;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+}
+
+.title {
+    font-size: 48px;
+    margin: 5px;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'lulo-clean-one-bold';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lulo Clean One Bold'),
+         url('../fonts/lulo-clean-one-bold.otf') format('opentype');
+}
