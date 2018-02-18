@@ -1,14 +1,14 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Blog from '../blog'
+import Dash from '../main/dash'
+import ExperimentalRouter from '../experimental/router'
 
-const MainRouter = () => (
+const MasterRouter = () => (
   <Switch>
-    <Route exact path='/' component={() => <h3>HI</h3>}/>
-    <Route path='/blog' component={Blog}/>
-    <Route path='/about' component={() => <h3>BYE</h3>}/>
+    <Route path='/main' component={Dash}/>
+    <Route path='/experimental' component={ExperimentalRouter}/>
   </Switch>
 )
 
-export default MainRouter
+export default MasterRouter

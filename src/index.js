@@ -2,12 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 
-import Dash from './dash'
+import MasterRouter from './router'
 import registerServiceWorker from './registerServiceWorker'
 
 ReactDOM.render((
   <BrowserRouter>
-    <Dash />
+    <MasterRouter />
   </BrowserRouter>
 ), document.getElementById('root'))
 
