@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Logo from '../images/koala_tee.png'
-import NavItem from '../nav-item'
+import { NavItemBlue } from '../nav-item'
 
 import css from './index.css'
 
@@ -16,11 +16,11 @@ const Header = () => (
             </span> 
         </span>
         <nav className={css.navBarContainer}>
-            <NavItem to='/experimental/koalatee'>Home</NavItem>
-            <NavItem to='/experimental/koalatee/about'>About</NavItem>
-            <NavItem to='/experimental/koalatee/faq'>FAQ</NavItem>
-            <NavItem to='/experimental/koalatee/sizes'>Sizes</NavItem>
-            <NavItem to='/experimental/koalatee/contact'>Contact Us</NavItem>
+            <NavItemBlue to='/experimental/koalatee'>Home</NavItemBlue>
+            <NavItemBlue to='/experimental/koalatee/about'>About</NavItemBlue>
+            <NavItemBlue to='/experimental/koalatee/faq'>FAQ</NavItemBlue>
+            <NavItemBlue to='/experimental/koalatee/sizes'>Sizes</NavItemBlue>
+            <NavItemBlue to='/experimental/koalatee/contact'>Contact Us</NavItemBlue>
         </nav>    
     </header>
 )

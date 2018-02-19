@@ -1,10 +1,22 @@
 .navBarItem {
-    margin: 0 40px;
-    color: #0D96B5;
-    transition: all 0.2s ease-in-out;
+    padding: 0 40px;
     text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease-in-out;
 }
 
-.navBarItem:hover {
+.blue {
+    color: #0D96B5;
+}
+
+.blue:hover {
+    color: #9FD9E6;
+}
+
+.white {
+    color: #fff;
+}
+
+.white:hover {
     color: #9FD9E6;
 }

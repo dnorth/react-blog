@@ -9,6 +9,18 @@ const NavItem = (props) => (
     </a>
 )
 
+export const NavItemBlue = (props) => (
+    <span className={css.blue}>
+        <NavItem to={props.to}>{props.children}</NavItem>
+    </span>
+)
+
+export const NavItemWhite = (props) => (
+    <span className={css.white}>
+        <NavItem to={props.to}>{props.children}</NavItem>
+    </span>
+)
+
 NavItem.propTypes = {
     to: string
   }
@@ -16,5 +28,3 @@ NavItem.propTypes = {
   NavItem.defaultProps = {
     to: '/'
   }
-
-export default NavItem

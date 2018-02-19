@@ -1,4 +1,21 @@
 .footerGrid {
     grid-area: footer;
     background: #0D96B5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: lulo-clean-one-bold;
+}
+
+.navBarContainer {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.socialNav {
+    display: flex;
+    justify-content: center;
 }
