@@ -1,0 +1,10 @@
+.navBarItem {
+    margin: 0 40px;
+    color: #0D96B5;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.navBarItem:hover {
+    color: #9FD9E6;
+}

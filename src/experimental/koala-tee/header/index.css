@@ -1,17 +1,53 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 190px;
+.headerGrid {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+        "shipping"
+        "title"
+        "nav";
+    height: 250px;
     background-color: #F78E05;
     font-family: lulo-clean-one-bold;
 }
 
+.shippingHeader {
+    grid-area: shipping;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0D96B5;
+    color: #fff;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.titleGrid {
+    grid-area: title;
+    align-self: center;
+    justify-self: center;
+
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-areas:
+    "logo title cart";
+    color: #fff;
+}
+
+.logo {
+    grid-area: logo;
+    justify-self: center;
+}
+
 .titleContainer {
+    grid-area: title;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    justify-content: center;
+
 }
 
 .title {
@@ -24,6 +60,14 @@
     font-size: 16px;
     line-height: 16px;
     margin: 5px;
+}
+
+.navBarContainer {
+    grid-area: nav;
+    align-self: center;
+    justify-self: center;
+
+    display: flex;
 }
 
 @font-face {
