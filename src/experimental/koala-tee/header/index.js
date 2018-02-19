@@ -6,7 +6,7 @@ import NavItem from '../nav-item'
 import css from './index.css'
 
 const Header = () => (
-    <div className={css.headerGrid}>
+    <header className={css.headerGrid}>
         <span className={css.shippingHeader}>All Prices Include Tax & Shipping to the U.S.</span>
         <span className={css.titleGrid}>
             <img src={Logo} className={css.logo} alt='koala tee logo' />
@@ -22,7 +22,7 @@ const Header = () => (
             <NavItem to='/experimental/koalatee/sizes'>Sizes</NavItem>
             <NavItem to='/experimental/koalatee/contact'>Contact Us</NavItem>
         </nav>    
-    </div>
+    </header>
 )
 
 export default Header
