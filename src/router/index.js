@@ -6,6 +6,7 @@ import ExperimentalRouter from '../experimental/router'
 
 const MasterRouter = () => (
   <Switch>
+    <Route exact path='/' component={Dash} />
     <Route path='/main' component={Dash}/>
     <Route path='/experimental' component={ExperimentalRouter}/>
   </Switch>
