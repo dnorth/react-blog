@@ -1,0 +1,4 @@
+.footerGrid {
+    grid-area: footer;
+    background: #0D96B5;
+}
